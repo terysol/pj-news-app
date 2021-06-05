@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import NewsItem from './NewsItem'
+import {API_KEY} from "./apikey";
 // 스타일 추가
 import '../style.css'
 import '../NewsApp.css'
@@ -15,7 +16,7 @@ class NewsApp extends Component {
 
     // 크롭에서 잘 보여주기 위해서는 json formatter 확장 프로그램 깔기
     componentDidMount() {       // 초기 데이트 가져오기.
-        const apiKey = '630bb3bf74c842db83b3e8e4d111ef07'
+        const apiKey = API_KEY;
 
         // fetch 하기에 좋은 메소드
         fetch(`http://newsapi.org/v2/top-headlines?country=kr&apiKey=${apiKey}`)
